@@ -1,0 +1,1 @@
+/gpfs/hpc/home/a72094/projects/nextflow_ws/rnaseq-master/assets/where_are_my_files.txt

@@ -1,0 +1,2 @@
+/bin/bash: line 0: cd: /gpfs/hpc/home/a72094/projects/nextflow_ws/rnaseq-master/work/cd/2bc80a82fbb51ea5f3421c311854a0: No such file or directory
+/bin/bash: /gpfs/hpc/home/a72094/projects/nextflow_ws/rnaseq-master/work/cd/2bc80a82fbb51ea5f3421c311854a0/.command.stub: No such file or directory
