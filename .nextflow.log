@@ -1,0 +1,383 @@
+Nov-16 19:51:02.423 [main] DEBUG nextflow.cli.Launcher - $> /gpfs/hpchome/kerimov/.local/bin/nextflow run . -with-singularity /gpfs/hpc/home/a72094/projects/singularity_temp/NFcore_SingCont_V1.1/nfcore-rnaseq-1.1.img --reads /gpfs/hpc/home/a72094/datasets/controlled_access/Schwartzentruber_2018_Neurons/temp_Schwarz/SAMEA*/SAMEA*{1,2}.fastq.gz --genome GRCh38 -profile ut_hpc_slurm --skip_qc
+Nov-16 19:51:02.659 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 18.10.1
+Nov-16 19:51:03.677 [main] INFO  nextflow.cli.CmdRun - Launching `./main.nf` [marvelous_darwin] - revision: 7c9a828c2b
+Nov-16 19:51:03.695 [main] DEBUG nextflow.config.ConfigBuilder - Found config local: /gpfs/hpc/home/a72094/projects/nextflow_ws/rnaseq-master/nextflow.config
+Nov-16 19:51:03.696 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /gpfs/hpc/home/a72094/projects/nextflow_ws/rnaseq-master/nextflow.config
+Nov-16 19:51:03.708 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `ut_hpc_slurm`
+Nov-16 19:51:04.434 [main] DEBUG nextflow.config.ConfigBuilder - Available config profiles: [standard, hebbe, cfc, uppmax_devel, ut_hpc_slurm, test, uppmax, none, docker, gis, ccga, conda, singularity, uct_hex, awsbatch, binac]
+Nov-16 19:51:04.568 [main] DEBUG nextflow.config.ConfigBuilder - Enabling execution in Singularity container as requested by cli option `-with-singularity null`
+Nov-16 19:51:04.604 [main] DEBUG nextflow.Session - Session uuid: 7f82bb70-e3cc-41bb-a853-5a543a10e0a6
+Nov-16 19:51:04.605 [main] DEBUG nextflow.Session - Run name: marvelous_darwin
+Nov-16 19:51:04.606 [main] DEBUG nextflow.Session - Executor pool size: 40
+Nov-16 19:51:04.625 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 18.10.1 build 5003
+  Modified: 24-10-2018 14:03 UTC (17:03 EEST)
+  System: Linux 3.10.0-862.11.6.el7.x86_64
+  Runtime: Groovy 2.5.3 on Java HotSpot(TM) 64-Bit Server VM 1.8.0_40-b26
+  Encoding: UTF-8 (UTF-8)
+  Process: 41918@stage1 [172.17.63.1]
+  CPUs: 40 - Mem: 62.7 GB (44 GB) - Swap: 68.4 GB (67.8 GB)
+Nov-16 19:51:04.677 [main] DEBUG nextflow.Session - Work-dir: /gpfs/hpc/home/a72094/projects/nextflow_ws/rnaseq-master/work [gpfs]
+Nov-16 19:51:05.034 [main] DEBUG nextflow.Session - Session start invoked
+Nov-16 19:51:05.041 [main] DEBUG nextflow.processor.TaskDispatcher - Dispatcher > start
+Nov-16 19:51:05.041 [main] DEBUG nextflow.trace.TraceFileObserver - Flow starting -- trace file: /gpfs/hpc/home/a72094/projects/nextflow_ws/rnaseq-master/results/pipeline_info/pipeline_info/nfcore-rnaseq_trace.txt
+Nov-16 19:51:05.054 [main] DEBUG nextflow.script.ScriptRunner - > Script parsing
+Nov-16 19:51:06.120 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Nov-16 19:51:06.175 [PathVisitor-1] DEBUG nextflow.file.PathVisitor - files for syntax: glob; folder: /gpfs/hpc/home/a72094/annotations/GRCh38/hisat2_index_v90/; pattern: Homo_sapiens.GRCh38.dna.primary_assembly*; options: [:]
+Nov-16 19:51:06.295 [PathVisitor-1] DEBUG nextflow.file.PathVisitor - files for syntax: glob; folder: /gpfs/hpc/home/a72094/datasets/controlled_access/Schwartzentruber_2018_Neurons/temp_Schwarz/; pattern: SAMEA*/SAMEA*{1,2}.fastq.gz; options: [:]
+Nov-16 19:51:06.317 [main] INFO  nextflow.Nextflow - =======================================================
+                                          ,--./,-.
+          ___     __   __   __   ___     /,-._.--~'
+    |\ | |__  __ /  ` /  \ |__) |__         }  {
+    | \| |       \__, \__/ |  \ |___     \`-._,-`-,
+                                          `._,._,'
+
+ nf-core/rnaseq : RNA-Seq Best Practice v1.1
+=======================================================
+Nov-16 19:51:06.324 [main] INFO  nextflow.Nextflow - Run Name       : marvelous_darwin
+Reads          : /gpfs/hpc/home/a72094/datasets/controlled_access/Schwartzentruber_2018_Neurons/temp_Schwarz/SAMEA*/SAMEA*{1,2}.fastq.gz
+Data Type      : Paired-End
+Genome         : GRCh38
+Strandedness   : Reverse
+Trim R1        : 0
+Trim R2        : 0
+Trim 3' R1     : 0
+Trim 3' R2     : 0
+Aligner        : HISAT2
+HISAT2 Index   : /gpfs/hpc/home/a72094/annotations/GRCh38/hisat2_index_v90/Homo_sapiens.GRCh38.dna.primary_assembly
+GTF Annotation : /gpfs/hpc/home/a72094/annotations//GRCh38/Gencode_28/gencode.v28.basic.annotation.gtf
+Save Reference : Yes
+Save Trimmed   : Yes
+Save Intermeds : Yes
+Max Memory     : 128 GB
+Max CPUs       : 16
+Max Time       : 10d
+Output dir     : ./results
+Working dir    : /gpfs/hpc/home/a72094/projects/nextflow_ws/rnaseq-master/work
+Container      : /gpfs/hpc/home/a72094/projects/singularity_temp/NFcore_SingCont_V1.1/nfcore-rnaseq-1.1.img
+Current home   : /gpfs/hpchome/kerimov
+Current user   : kerimov
+Current path   : /gpfs/hpc/home/a72094/projects/nextflow_ws/rnaseq-master
+Script dir     : /gpfs/hpc/home/a72094/projects/nextflow_ws/rnaseq-master
+Config Profile : ut_hpc_slurm
+Nov-16 19:51:06.328 [main] INFO  nextflow.Nextflow - =========================================
+Nov-16 19:51:06.436 [main] DEBUG nextflow.processor.ProcessFactory - << taskConfig executor: slurm
+Nov-16 19:51:06.436 [main] DEBUG nextflow.processor.ProcessFactory - >> processorType: 'slurm'
+Nov-16 19:51:06.454 [main] DEBUG nextflow.executor.Executor - Initializing executor: slurm
+Nov-16 19:51:06.457 [main] INFO  nextflow.executor.Executor - [warm up] executor > slurm
+Nov-16 19:51:06.462 [main] DEBUG n.processor.TaskPollingMonitor - Creating task monitor for executor 'slurm' > capacity: 20; pollInterval: 5s; dumpInterval: 5m 
+Nov-16 19:51:06.466 [main] DEBUG nextflow.processor.TaskDispatcher - Starting monitor: TaskPollingMonitor
+Nov-16 19:51:06.467 [main] DEBUG n.processor.TaskPollingMonitor - >>> barrier register (monitor: slurm)
+Nov-16 19:51:06.470 [main] DEBUG nextflow.executor.Executor - Invoke register for executor: slurm
+Nov-16 19:51:06.471 [main] DEBUG n.executor.AbstractGridExecutor - Creating executor 'slurm' > queue-stat-interval: 1m
+Nov-16 19:51:06.513 [main] DEBUG nextflow.Session - >>> barrier register (process: makeHisatSplicesites)
+Nov-16 19:51:06.516 [main] DEBUG nextflow.processor.TaskProcessor - Creating operator > makeHisatSplicesites -- maxForks: 40
+Nov-16 19:51:06.550 [main] DEBUG nextflow.processor.ProcessFactory - << taskConfig executor: slurm
+Nov-16 19:51:06.550 [main] DEBUG nextflow.processor.ProcessFactory - >> processorType: 'slurm'
+Nov-16 19:51:06.551 [main] DEBUG nextflow.executor.Executor - Initializing executor: slurm
+Nov-16 19:51:06.552 [main] DEBUG n.executor.AbstractGridExecutor - Creating executor 'slurm' > queue-stat-interval: 1m
+Nov-16 19:51:06.553 [main] DEBUG nextflow.Session - >>> barrier register (process: makeBED12)
+Nov-16 19:51:06.553 [main] DEBUG nextflow.processor.TaskProcessor - Creating operator > makeBED12 -- maxForks: 40
+Nov-16 19:51:06.578 [main] DEBUG nextflow.processor.ProcessFactory - << taskConfig executor: slurm
+Nov-16 19:51:06.579 [main] DEBUG nextflow.processor.ProcessFactory - >> processorType: 'slurm'
+Nov-16 19:51:06.579 [main] DEBUG nextflow.executor.Executor - Initializing executor: slurm
+Nov-16 19:51:06.579 [main] DEBUG n.executor.AbstractGridExecutor - Creating executor 'slurm' > queue-stat-interval: 1m
+Nov-16 19:51:06.581 [main] DEBUG nextflow.Session - >>> barrier register (process: fastqc)
+Nov-16 19:51:06.582 [main] DEBUG nextflow.processor.TaskProcessor - Creating operator > fastqc -- maxForks: 40
+Nov-16 19:51:06.600 [main] DEBUG nextflow.util.CacheHelper - Config settings `withName:trim_galore` matches process trim_galore
+Nov-16 19:51:06.602 [main] DEBUG nextflow.processor.ProcessFactory - << taskConfig executor: slurm
+Nov-16 19:51:06.602 [main] DEBUG nextflow.processor.ProcessFactory - >> processorType: 'slurm'
+Nov-16 19:51:06.603 [main] DEBUG nextflow.executor.Executor - Initializing executor: slurm
+Nov-16 19:51:06.604 [main] DEBUG n.executor.AbstractGridExecutor - Creating executor 'slurm' > queue-stat-interval: 1m
+Nov-16 19:51:06.605 [main] DEBUG nextflow.Session - >>> barrier register (process: trim_galore)
+Nov-16 19:51:06.607 [main] DEBUG nextflow.processor.TaskProcessor - Creating operator > trim_galore -- maxForks: 40
+Nov-16 19:51:06.636 [Actor Thread 1] DEBUG nextflow.Session - <<< barrier arrive (process: fastqc)
+Nov-16 19:51:06.644 [main] DEBUG nextflow.util.CacheHelper - Config settings `withName:hisat2Align` matches process hisat2Align
+Nov-16 19:51:06.646 [main] DEBUG nextflow.processor.ProcessFactory - << taskConfig executor: slurm
+Nov-16 19:51:06.646 [main] DEBUG nextflow.processor.ProcessFactory - >> processorType: 'slurm'
+Nov-16 19:51:06.646 [main] DEBUG nextflow.executor.Executor - Initializing executor: slurm
+Nov-16 19:51:06.647 [main] DEBUG n.executor.AbstractGridExecutor - Creating executor 'slurm' > queue-stat-interval: 1m
+Nov-16 19:51:06.648 [main] DEBUG nextflow.Session - >>> barrier register (process: hisat2Align)
+Nov-16 19:51:06.648 [main] DEBUG nextflow.processor.TaskProcessor - Creating operator > hisat2Align -- maxForks: 40
+Nov-16 19:51:06.663 [main] DEBUG nextflow.util.CacheHelper - Config settings `withName:hisat2_sortOutput` matches process hisat2_sortOutput
+Nov-16 19:51:06.666 [main] DEBUG nextflow.processor.ProcessFactory - << taskConfig executor: slurm
+Nov-16 19:51:06.666 [main] DEBUG nextflow.processor.ProcessFactory - >> processorType: 'slurm'
+Nov-16 19:51:06.666 [main] DEBUG nextflow.executor.Executor - Initializing executor: slurm
+Nov-16 19:51:06.667 [main] DEBUG n.executor.AbstractGridExecutor - Creating executor 'slurm' > queue-stat-interval: 1m
+Nov-16 19:51:06.668 [main] DEBUG nextflow.Session - >>> barrier register (process: hisat2_sortOutput)
+Nov-16 19:51:06.669 [main] DEBUG nextflow.processor.TaskProcessor - Creating operator > hisat2_sortOutput -- maxForks: 40
+Nov-16 19:51:06.686 [main] DEBUG nextflow.util.CacheHelper - Config settings `withName:rseqc` matches process rseqc
+Nov-16 19:51:06.688 [main] DEBUG nextflow.processor.ProcessFactory - << taskConfig executor: slurm
+Nov-16 19:51:06.688 [main] DEBUG nextflow.processor.ProcessFactory - >> processorType: 'slurm'
+Nov-16 19:51:06.688 [main] DEBUG nextflow.executor.Executor - Initializing executor: slurm
+Nov-16 19:51:06.688 [main] DEBUG n.executor.AbstractGridExecutor - Creating executor 'slurm' > queue-stat-interval: 1m
+Nov-16 19:51:06.690 [main] DEBUG nextflow.Session - >>> barrier register (process: rseqc)
+Nov-16 19:51:06.690 [main] DEBUG nextflow.processor.TaskProcessor - Creating operator > rseqc -- maxForks: 40
+Nov-16 19:51:06.698 [main] DEBUG nextflow.util.CacheHelper - Config settings `withName:createBigWig` matches process createBigWig
+Nov-16 19:51:06.699 [main] DEBUG nextflow.processor.ProcessFactory - << taskConfig executor: slurm
+Nov-16 19:51:06.699 [main] DEBUG nextflow.processor.ProcessFactory - >> processorType: 'slurm'
+Nov-16 19:51:06.699 [main] DEBUG nextflow.executor.Executor - Initializing executor: slurm
+Nov-16 19:51:06.699 [main] DEBUG n.executor.AbstractGridExecutor - Creating executor 'slurm' > queue-stat-interval: 1m
+Nov-16 19:51:06.700 [main] DEBUG nextflow.Session - >>> barrier register (process: createBigWig)
+Nov-16 19:51:06.700 [main] DEBUG nextflow.processor.TaskProcessor - Creating operator > createBigWig -- maxForks: 40
+Nov-16 19:51:06.706 [main] DEBUG nextflow.util.CacheHelper - Config settings `withName:genebody_coverage` matches process genebody_coverage
+Nov-16 19:51:06.708 [main] DEBUG nextflow.processor.ProcessFactory - << taskConfig executor: slurm
+Nov-16 19:51:06.708 [main] DEBUG nextflow.processor.ProcessFactory - >> processorType: 'slurm'
+Nov-16 19:51:06.708 [main] DEBUG nextflow.executor.Executor - Initializing executor: slurm
+Nov-16 19:51:06.710 [main] DEBUG n.executor.AbstractGridExecutor - Creating executor 'slurm' > queue-stat-interval: 1m
+Nov-16 19:51:06.711 [main] DEBUG nextflow.Session - >>> barrier register (process: genebody_coverage)
+Nov-16 19:51:06.713 [main] DEBUG nextflow.processor.TaskProcessor - Creating operator > genebody_coverage -- maxForks: 40
+Nov-16 19:51:06.721 [main] DEBUG nextflow.processor.ProcessFactory - << taskConfig executor: slurm
+Nov-16 19:51:06.722 [main] DEBUG nextflow.processor.ProcessFactory - >> processorType: 'slurm'
+Nov-16 19:51:06.722 [main] DEBUG nextflow.executor.Executor - Initializing executor: slurm
+Nov-16 19:51:06.722 [main] DEBUG n.executor.AbstractGridExecutor - Creating executor 'slurm' > queue-stat-interval: 1m
+Nov-16 19:51:06.723 [main] DEBUG nextflow.Session - >>> barrier register (process: preseq)
+Nov-16 19:51:06.724 [main] DEBUG nextflow.processor.TaskProcessor - Creating operator > preseq -- maxForks: 40
+Nov-16 19:51:06.733 [main] DEBUG nextflow.util.CacheHelper - Config settings `withName:markDuplicates` matches process markDuplicates
+Nov-16 19:51:06.734 [main] DEBUG nextflow.processor.ProcessFactory - << taskConfig executor: slurm
+Nov-16 19:51:06.734 [main] DEBUG nextflow.processor.ProcessFactory - >> processorType: 'slurm'
+Nov-16 19:51:06.734 [main] DEBUG nextflow.executor.Executor - Initializing executor: slurm
+Nov-16 19:51:06.734 [main] DEBUG n.executor.AbstractGridExecutor - Creating executor 'slurm' > queue-stat-interval: 1m
+Nov-16 19:51:06.735 [main] DEBUG nextflow.Session - >>> barrier register (process: markDuplicates)
+Nov-16 19:51:06.735 [main] DEBUG nextflow.processor.TaskProcessor - Creating operator > markDuplicates -- maxForks: 40
+Nov-16 19:51:06.741 [main] DEBUG nextflow.util.CacheHelper - Config settings `withName:dupradar` matches process dupradar
+Nov-16 19:51:06.742 [main] DEBUG nextflow.processor.ProcessFactory - << taskConfig executor: slurm
+Nov-16 19:51:06.742 [main] DEBUG nextflow.processor.ProcessFactory - >> processorType: 'slurm'
+Nov-16 19:51:06.742 [main] DEBUG nextflow.executor.Executor - Initializing executor: slurm
+Nov-16 19:51:06.743 [main] DEBUG n.executor.AbstractGridExecutor - Creating executor 'slurm' > queue-stat-interval: 1m
+Nov-16 19:51:06.743 [main] DEBUG nextflow.Session - >>> barrier register (process: dupradar)
+Nov-16 19:51:06.744 [main] DEBUG nextflow.processor.TaskProcessor - Creating operator > dupradar -- maxForks: 40
+Nov-16 19:51:06.752 [main] DEBUG nextflow.util.CacheHelper - Config settings `withName:featureCounts` matches process featureCounts
+Nov-16 19:51:06.753 [main] DEBUG nextflow.processor.ProcessFactory - << taskConfig executor: slurm
+Nov-16 19:51:06.753 [main] DEBUG nextflow.processor.ProcessFactory - >> processorType: 'slurm'
+Nov-16 19:51:06.754 [main] DEBUG nextflow.executor.Executor - Initializing executor: slurm
+Nov-16 19:51:06.754 [main] DEBUG n.executor.AbstractGridExecutor - Creating executor 'slurm' > queue-stat-interval: 1m
+Nov-16 19:51:06.755 [main] DEBUG nextflow.Session - >>> barrier register (process: featureCounts)
+Nov-16 19:51:06.755 [main] DEBUG nextflow.processor.TaskProcessor - Creating operator > featureCounts -- maxForks: 40
+Nov-16 19:51:06.764 [main] DEBUG nextflow.processor.ProcessFactory - << taskConfig executor: slurm
+Nov-16 19:51:06.764 [main] DEBUG nextflow.processor.ProcessFactory - >> processorType: 'slurm'
+Nov-16 19:51:06.764 [main] DEBUG nextflow.executor.Executor - Initializing executor: slurm
+Nov-16 19:51:06.764 [main] DEBUG n.executor.AbstractGridExecutor - Creating executor 'slurm' > queue-stat-interval: 1m
+Nov-16 19:51:06.765 [main] DEBUG nextflow.Session - >>> barrier register (process: merge_featureCounts)
+Nov-16 19:51:06.765 [main] DEBUG nextflow.processor.TaskProcessor - Creating operator > merge_featureCounts -- maxForks: 40
+Nov-16 19:51:06.773 [main] DEBUG nextflow.processor.ProcessFactory - << taskConfig executor: slurm
+Nov-16 19:51:06.773 [main] DEBUG nextflow.processor.ProcessFactory - >> processorType: 'slurm'
+Nov-16 19:51:06.773 [main] DEBUG nextflow.executor.Executor - Initializing executor: slurm
+Nov-16 19:51:06.774 [main] DEBUG n.executor.AbstractGridExecutor - Creating executor 'slurm' > queue-stat-interval: 1m
+Nov-16 19:51:06.775 [main] DEBUG nextflow.Session - >>> barrier register (process: stringtieFPKM)
+Nov-16 19:51:06.775 [main] DEBUG nextflow.processor.TaskProcessor - Creating operator > stringtieFPKM -- maxForks: 40
+Nov-16 19:51:06.796 [main] DEBUG nextflow.util.CacheHelper - Config settings `withName:sample_correlation` matches process sample_correlation
+Nov-16 19:51:06.798 [main] DEBUG nextflow.processor.ProcessFactory - << taskConfig executor: slurm
+Nov-16 19:51:06.798 [main] DEBUG nextflow.processor.ProcessFactory - >> processorType: 'slurm'
+Nov-16 19:51:06.799 [main] DEBUG nextflow.executor.Executor - Initializing executor: slurm
+Nov-16 19:51:06.799 [main] DEBUG n.executor.AbstractGridExecutor - Creating executor 'slurm' > queue-stat-interval: 1m
+Nov-16 19:51:06.817 [main] DEBUG nextflow.Session - >>> barrier register (process: sample_correlation)
+Nov-16 19:51:06.818 [main] DEBUG nextflow.processor.TaskProcessor - Creating operator > sample_correlation -- maxForks: 40
+Nov-16 19:51:06.825 [main] DEBUG nextflow.util.CacheHelper - Config settings `withName:get_software_versions` matches process get_software_versions
+Nov-16 19:51:06.826 [main] DEBUG nextflow.processor.ProcessFactory - << taskConfig executor: slurm
+Nov-16 19:51:06.826 [main] DEBUG nextflow.processor.ProcessFactory - >> processorType: 'slurm'
+Nov-16 19:51:06.826 [main] DEBUG nextflow.executor.Executor - Initializing executor: slurm
+Nov-16 19:51:06.827 [main] DEBUG n.executor.AbstractGridExecutor - Creating executor 'slurm' > queue-stat-interval: 1m
+Nov-16 19:51:06.828 [main] DEBUG nextflow.Session - >>> barrier register (process: get_software_versions)
+Nov-16 19:51:06.828 [main] DEBUG nextflow.processor.TaskProcessor - Creating operator > get_software_versions -- maxForks: 40
+Nov-16 19:51:06.834 [main] DEBUG nextflow.util.CacheHelper - Config settings `withName:workflow_summary_mqc` matches process workflow_summary_mqc
+Nov-16 19:51:06.835 [main] DEBUG nextflow.processor.ProcessFactory - << taskConfig executor: local
+Nov-16 19:51:06.835 [main] DEBUG nextflow.processor.ProcessFactory - >> processorType: 'local'
+Nov-16 19:51:06.838 [main] DEBUG nextflow.executor.Executor - Initializing executor: local
+Nov-16 19:51:06.838 [main] INFO  nextflow.executor.Executor - [warm up] executor > local
+Nov-16 19:51:06.841 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=40; memory=62.7 GB; capacity=20; pollInterval=100ms; dumpInterval=5m
+Nov-16 19:51:06.844 [main] DEBUG nextflow.processor.TaskDispatcher - Starting monitor: LocalPollingMonitor
+Nov-16 19:51:06.845 [main] DEBUG n.processor.TaskPollingMonitor - >>> barrier register (monitor: local)
+Nov-16 19:51:06.845 [main] DEBUG nextflow.executor.Executor - Invoke register for executor: local
+Nov-16 19:51:06.846 [main] DEBUG nextflow.Session - >>> barrier register (process: workflow_summary_mqc)
+Nov-16 19:51:06.846 [main] DEBUG nextflow.processor.TaskProcessor - Creating operator > workflow_summary_mqc -- maxForks: 40
+Nov-16 19:51:06.871 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process trim_galore (SAMEA3234534) > jobId: 3347392; workDir: /gpfs/hpc/home/a72094/projects/nextflow_ws/rnaseq-master/work/cd/2bc80a82fbb51ea5f3421c311854a0
+Nov-16 19:51:06.873 [main] DEBUG nextflow.util.CacheHelper - Config settings `withName:multiqc` matches process multiqc
+Nov-16 19:51:06.873 [Task submitter] INFO  nextflow.Session - [db/ea45d8] Submitted process > workflow_summary_mqc
+Nov-16 19:51:06.874 [main] DEBUG nextflow.processor.ProcessFactory - << taskConfig executor: slurm
+Nov-16 19:51:06.875 [main] DEBUG nextflow.processor.ProcessFactory - >> processorType: 'slurm'
+Nov-16 19:51:06.875 [main] DEBUG nextflow.executor.Executor - Initializing executor: slurm
+Nov-16 19:51:06.876 [main] DEBUG n.executor.AbstractGridExecutor - Creating executor 'slurm' > queue-stat-interval: 1m
+Nov-16 19:51:06.877 [main] DEBUG nextflow.Session - >>> barrier register (process: multiqc)
+Nov-16 19:51:06.877 [main] DEBUG nextflow.processor.TaskProcessor - Creating operator > multiqc -- maxForks: 40
+Nov-16 19:51:06.884 [Task submitter] INFO  nextflow.Session - [cd/2bc80a] Submitted process > trim_galore (SAMEA3234534)
+Nov-16 19:51:06.885 [main] DEBUG nextflow.processor.ProcessFactory - << taskConfig executor: slurm
+Nov-16 19:51:06.885 [main] DEBUG nextflow.processor.ProcessFactory - >> processorType: 'slurm'
+Nov-16 19:51:06.885 [main] DEBUG nextflow.executor.Executor - Initializing executor: slurm
+Nov-16 19:51:06.885 [main] DEBUG n.executor.AbstractGridExecutor - Creating executor 'slurm' > queue-stat-interval: 1m
+Nov-16 19:51:06.886 [main] DEBUG nextflow.Session - >>> barrier register (process: output_documentation)
+Nov-16 19:51:06.886 [main] DEBUG nextflow.processor.TaskProcessor - Creating operator > output_documentation -- maxForks: 40
+Nov-16 19:51:06.888 [main] DEBUG nextflow.script.ScriptRunner - > Await termination 
+Nov-16 19:51:06.888 [main] DEBUG nextflow.Session - Session await
+Nov-16 19:51:06.896 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 20; name: workflow_summary_mqc; status: COMPLETED; exit: -; error: -; workDir: /gpfs/hpc/home/a72094/projects/nextflow_ws/rnaseq-master/work/db/ea45d86bb8684a9c4e766b1408310a]
+Nov-16 19:51:06.905 [Actor Thread 1] DEBUG nextflow.Session - <<< barrier arrive (process: workflow_summary_mqc)
+Nov-16 19:51:06.922 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process trim_galore (SAMEA3234540) > jobId: 3347393; workDir: /gpfs/hpc/home/a72094/projects/nextflow_ws/rnaseq-master/work/f7/f593d58680f1dcf70834a1eb21e57a
+Nov-16 19:51:06.922 [Task submitter] INFO  nextflow.Session - [f7/f593d5] Submitted process > trim_galore (SAMEA3234540)
+Nov-16 19:51:06.963 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process trim_galore (SAMEA3234538) > jobId: 3347394; workDir: /gpfs/hpc/home/a72094/projects/nextflow_ws/rnaseq-master/work/07/624066299aef086445e48ad4038021
+Nov-16 19:51:06.964 [Task submitter] INFO  nextflow.Session - [07/624066] Submitted process > trim_galore (SAMEA3234538)
+Nov-16 19:51:07.010 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process trim_galore (SAMEA3234544) > jobId: 3347395; workDir: /gpfs/hpc/home/a72094/projects/nextflow_ws/rnaseq-master/work/d3/6a07bf96d19f09304e5aec1d7d52d8
+Nov-16 19:51:07.012 [Task submitter] INFO  nextflow.Session - [d3/6a07bf] Submitted process > trim_galore (SAMEA3234544)
+Nov-16 19:51:07.059 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process trim_galore (SAMEA3234546) > jobId: 3347396; workDir: /gpfs/hpc/home/a72094/projects/nextflow_ws/rnaseq-master/work/24/c3087d748913abc5242fbd2bbc05b4
+Nov-16 19:51:07.060 [Task submitter] INFO  nextflow.Session - [24/c3087d] Submitted process > trim_galore (SAMEA3234546)
+Nov-16 19:51:07.103 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process trim_galore (SAMEA3234532) > jobId: 3347397; workDir: /gpfs/hpc/home/a72094/projects/nextflow_ws/rnaseq-master/work/f9/3847ba27910e0fc42ee9bdc9c36c95
+Nov-16 19:51:07.103 [Task submitter] INFO  nextflow.Session - [f9/3847ba] Submitted process > trim_galore (SAMEA3234532)
+Nov-16 19:51:07.148 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process trim_galore (SAMEA3234542) > jobId: 3347398; workDir: /gpfs/hpc/home/a72094/projects/nextflow_ws/rnaseq-master/work/11/4e4ffa9fcc49382451c894b8091cbf
+Nov-16 19:51:07.150 [Task submitter] INFO  nextflow.Session - [11/4e4ffa] Submitted process > trim_galore (SAMEA3234542)
+Nov-16 19:51:07.191 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process trim_galore (SAMEA3234536) > jobId: 3347399; workDir: /gpfs/hpc/home/a72094/projects/nextflow_ws/rnaseq-master/work/b3/f2a30671756d194b80fa81c7d604f1
+Nov-16 19:51:07.192 [Task submitter] INFO  nextflow.Session - [b3/f2a306] Submitted process > trim_galore (SAMEA3234536)
+Nov-16 19:51:07.223 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process makeBED12 (gencode.v28.basic.annotation.gtf) > jobId: 3347400; workDir: /gpfs/hpc/home/a72094/projects/nextflow_ws/rnaseq-master/work/92/8f59c17ef065e39eb3e2c8bee461c5
+Nov-16 19:51:07.224 [Task submitter] INFO  nextflow.Session - [92/8f59c1] Submitted process > makeBED12 (gencode.v28.basic.annotation.gtf)
+Nov-16 19:51:07.252 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process makeHisatSplicesites (gencode.v28.basic.annotation.gtf) > jobId: 3347401; workDir: /gpfs/hpc/home/a72094/projects/nextflow_ws/rnaseq-master/work/de/448a60b1b14ff710397323748f3c59
+Nov-16 19:51:07.253 [Task submitter] INFO  nextflow.Session - [de/448a60] Submitted process > makeHisatSplicesites (gencode.v28.basic.annotation.gtf)
+Nov-16 19:51:07.278 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process get_software_versions > jobId: 3347402; workDir: /gpfs/hpc/home/a72094/projects/nextflow_ws/rnaseq-master/work/32/4a6658dfe74a51dda79856f9f3c085
+Nov-16 19:51:07.278 [Task submitter] INFO  nextflow.Session - [32/4a6658] Submitted process > get_software_versions
+Nov-16 19:51:07.303 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process output_documentation > jobId: 3347403; workDir: /gpfs/hpc/home/a72094/projects/nextflow_ws/rnaseq-master/work/b1/fae9ad8da16506440fd08469a6ba97
+Nov-16 19:51:07.304 [Task submitter] INFO  nextflow.Session - [b1/fae9ad] Submitted process > output_documentation
+Nov-16 19:51:36.491 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 3347392; id: 18; name: trim_galore (SAMEA3234534); status: COMPLETED; exit: 127; error: -; workDir: /gpfs/hpc/home/a72094/projects/nextflow_ws/rnaseq-master/work/cd/2bc80a82fbb51ea5f3421c311854a0 started: 1542390691489; exited: 2018-11-16T17:51:32Z; ]
+Nov-16 19:51:36.542 [Task monitor] ERROR nextflow.processor.TaskProcessor - Error executing process > 'trim_galore (SAMEA3234534)'
+
+Caused by:
+  Process `trim_galore (SAMEA3234534)` terminated with an error exit status (127)
+
+Command executed:
+
+  trim_galore --paired --fastqc --gzip     SAMEA3234534_1.fastq.gz SAMEA3234534_2.fastq.gz
+
+Command exit status:
+  127
+
+Command output:
+  (empty)
+
+Command error:
+  /bin/bash: line 0: cd: /gpfs/hpc/home/a72094/projects/nextflow_ws/rnaseq-master/work/cd/2bc80a82fbb51ea5f3421c311854a0: No such file or directory
+  /bin/bash: .command.stub: No such file or directory
+
+Work dir:
+  /gpfs/hpc/home/a72094/projects/nextflow_ws/rnaseq-master/work/cd/2bc80a82fbb51ea5f3421c311854a0
+
+Tip: view the complete command output by changing to the process work dir and entering the command `cat .command.out`
+Nov-16 19:51:36.549 [Task monitor] DEBUG nextflow.Session - Session aborted -- Cause: Process `trim_galore (SAMEA3234534)` terminated with an error exit status (127)
+Nov-16 19:51:36.593 [Task monitor] DEBUG nextflow.Session - The following nodes are still active:
+[process] hisat2Align
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: reads
+  port 1: (value) bound ; channel: hs2_indices
+  port 2: (value) OPEN  ; channel: alignment_splicesites
+  port 3: (value) bound ; channel: wherearemyfiles
+  port 4: (cntrl) -     ; channel: $
+
+[process] hisat2_sortOutput
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: hisat2_bam
+  port 1: (value) bound ; channel: wherearemyfiles
+  port 2: (cntrl) -     ; channel: $
+
+[process] rseqc
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: bam_rseqc
+  port 1: (value) OPEN  ; channel: bed12
+  port 2: (cntrl) -     ; channel: $
+
+[process] createBigWig
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: bam
+  port 1: (cntrl) -     ; channel: $
+
+[process] genebody_coverage
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: bigwig
+  port 1: (value) OPEN  ; channel: bed12
+  port 2: (cntrl) -     ; channel: $
+
+[process] preseq
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: bam_preseq
+  port 1: (cntrl) -     ; channel: $
+
+[process] markDuplicates
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: bam
+  port 1: (cntrl) -     ; channel: $
+
+[process] dupradar
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: bam_md
+  port 1: (value) bound ; channel: gtf
+  port 2: (cntrl) -     ; channel: $
+
+[process] featureCounts
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: bam_featurecounts
+  port 1: (value) bound ; channel: gtf
+  port 2: (value) bound ; channel: biotypes_header
+  port 3: (cntrl) -     ; channel: $
+
+[process] merge_featureCounts
+  status=ACTIVE
+  port 0: (value) OPEN  ; channel: input_files
+  port 1: (cntrl) -     ; channel: $
+
+[process] stringtieFPKM
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: bam_stringtieFPKM
+  port 1: (value) bound ; channel: gtf
+  port 2: (cntrl) -     ; channel: $
+
+[process] sample_correlation
+  status=ACTIVE
+  port 0: (value) OPEN  ; channel: input_files
+  port 1: (value) OPEN  ; channel: num_bams
+  port 2: (value) bound ; channel: mdsplot_header
+  port 3: (value) bound ; channel: heatmap_header
+  port 4: (cntrl) -     ; channel: $
+
+[process] multiqc
+  status=ACTIVE
+  port 0: (value) bound ; channel: multiqc_config
+  port 1: (value) bound ; channel: fastqc
+  port 2: (value) OPEN  ; channel: trimgalore/*
+  port 3: (value) OPEN  ; channel: alignment/*
+  port 4: (value) OPEN  ; channel: rseqc/*
+  port 5: (value) OPEN  ; channel: rseqc/*
+  port 6: (value) OPEN  ; channel: preseq/*
+  port 7: (value) OPEN  ; channel: dupradar/*
+  port 8: (value) OPEN  ; channel: featureCounts/*
+  port 9: (value) OPEN  ; channel: featureCounts_biotype/*
+  port 10: (value) OPEN  ; channel: stringtie/stringtie_log*
+  port 11: (value) OPEN  ; channel: sample_correlation_results/*
+  port 12: (value) OPEN  ; channel: software_versions/*
+  port 13: (value) bound ; channel: workflow_summary/*
+  port 14: (cntrl) -     ; channel: $
+
+Nov-16 19:51:36.597 [Task monitor] DEBUG n.processor.TaskPollingMonitor - <<< barrier arrives (monitor: local)
+Nov-16 19:51:36.598 [main] DEBUG nextflow.Session - Session await > all process finished
+Nov-16 19:51:36.599 [main] DEBUG nextflow.Session - Session await > all barriers passed
+Nov-16 19:51:36.604 [Actor Thread 1] DEBUG nextflow.Session - <<< barrier arrive (process: multiqc)
+Nov-16 19:51:36.609 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 3347393; id: 13; name: trim_galore (SAMEA3234540); status: COMPLETED; exit: 127; error: -; workDir: /gpfs/hpc/home/a72094/projects/nextflow_ws/rnaseq-master/work/f7/f593d58680f1dcf70834a1eb21e57a started: 1542390691519; exited: 2018-11-16T17:51:32Z; ]
+Nov-16 19:51:36.618 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 3347394; id: 16; name: trim_galore (SAMEA3234538); status: COMPLETED; exit: 127; error: -; workDir: /gpfs/hpc/home/a72094/projects/nextflow_ws/rnaseq-master/work/07/624066299aef086445e48ad4038021 started: 1542390691530; exited: 2018-11-16T17:51:32Z; ]
+Nov-16 19:51:36.627 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 3347395; id: 14; name: trim_galore (SAMEA3234544); status: COMPLETED; exit: 127; error: -; workDir: /gpfs/hpc/home/a72094/projects/nextflow_ws/rnaseq-master/work/d3/6a07bf96d19f09304e5aec1d7d52d8 started: 1542390691540; exited: 2018-11-16T17:51:31Z; ]
+Nov-16 19:51:36.636 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 3347396; id: 11; name: trim_galore (SAMEA3234546); status: COMPLETED; exit: 127; error: -; workDir: /gpfs/hpc/home/a72094/projects/nextflow_ws/rnaseq-master/work/24/c3087d748913abc5242fbd2bbc05b4 started: 1542390691547; exited: 2018-11-16T17:51:31Z; ]
+Nov-16 19:51:36.642 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 3347397; id: 17; name: trim_galore (SAMEA3234532); status: COMPLETED; exit: 127; error: -; workDir: /gpfs/hpc/home/a72094/projects/nextflow_ws/rnaseq-master/work/f9/3847ba27910e0fc42ee9bdc9c36c95 started: 1542390691555; exited: 2018-11-16T17:51:31Z; ]
+Nov-16 19:51:36.654 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 3347398; id: 15; name: trim_galore (SAMEA3234542); status: COMPLETED; exit: 127; error: -; workDir: /gpfs/hpc/home/a72094/projects/nextflow_ws/rnaseq-master/work/11/4e4ffa9fcc49382451c894b8091cbf started: 1542390691563; exited: 2018-11-16T17:51:32Z; ]
+Nov-16 19:51:36.662 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 3347399; id: 12; name: trim_galore (SAMEA3234536); status: COMPLETED; exit: 127; error: -; workDir: /gpfs/hpc/home/a72094/projects/nextflow_ws/rnaseq-master/work/b3/f2a30671756d194b80fa81c7d604f1 started: 1542390691570; exited: 2018-11-16T17:51:32Z; ]
+Nov-16 19:51:36.663 [Actor Thread 1] DEBUG nextflow.Session - <<< barrier arrive (process: trim_galore)
+Nov-16 19:51:36.670 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 3347400; id: 2; name: makeBED12 (gencode.v28.basic.annotation.gtf); status: COMPLETED; exit: 127; error: -; workDir: /gpfs/hpc/home/a72094/projects/nextflow_ws/rnaseq-master/work/92/8f59c17ef065e39eb3e2c8bee461c5 started: 1542390691581; exited: 2018-11-16T17:51:32Z; ]
+Nov-16 19:51:36.672 [Actor Thread 25] DEBUG nextflow.Session - <<< barrier arrive (process: makeBED12)
+Nov-16 19:51:36.681 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 3347401; id: 1; name: makeHisatSplicesites (gencode.v28.basic.annotation.gtf); status: COMPLETED; exit: 127; error: -; workDir: /gpfs/hpc/home/a72094/projects/nextflow_ws/rnaseq-master/work/de/448a60b1b14ff710397323748f3c59 started: 1542390691590; exited: 2018-11-16T17:51:32Z; ]
+Nov-16 19:51:36.682 [Actor Thread 25] DEBUG nextflow.Session - <<< barrier arrive (process: makeHisatSplicesites)
+Nov-16 19:51:36.693 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 3347402; id: 19; name: get_software_versions; status: COMPLETED; exit: 127; error: -; workDir: /gpfs/hpc/home/a72094/projects/nextflow_ws/rnaseq-master/work/32/4a6658dfe74a51dda79856f9f3c085 started: 1542390691599; exited: 2018-11-16T17:51:31Z; ]
+Nov-16 19:51:36.694 [Task monitor] INFO  nextflow.processor.TaskProcessor - [32/4a6658] NOTE: Process `get_software_versions` terminated with an error exit status (127) -- Error is ignored
+Nov-16 19:51:36.695 [Actor Thread 25] DEBUG nextflow.Session - <<< barrier arrive (process: get_software_versions)
+Nov-16 19:51:36.703 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 3347403; id: 21; name: output_documentation; status: COMPLETED; exit: 127; error: -; workDir: /gpfs/hpc/home/a72094/projects/nextflow_ws/rnaseq-master/work/b1/fae9ad8da16506440fd08469a6ba97 started: 1542390691608; exited: 2018-11-16T17:51:32Z; ]
+Nov-16 19:51:36.704 [Actor Thread 35] DEBUG nextflow.Session - <<< barrier arrive (process: output_documentation)
+Nov-16 19:51:36.705 [Task monitor] DEBUG n.processor.TaskPollingMonitor - <<< barrier arrives (monitor: slurm)
+Nov-16 19:51:36.778 [main] INFO  nextflow.Nextflow - [nfcore/rnaseq] Pipeline Complete
+Nov-16 19:51:36.798 [main] DEBUG nextflow.trace.StatsObserver - Workflow completed > WorkflowStats[succeedCount=1; failedCount=11; ignoredCount=1; cachedCount=0; succeedDuration=20ms; failedDuration=2m 2s; cachedDuration=0ms]
+Nov-16 19:51:36.798 [main] DEBUG nextflow.trace.TraceFileObserver - Flow completing -- flushing trace file
+Nov-16 19:51:36.801 [main] DEBUG nextflow.trace.ReportObserver - Flow completing -- rendering html report
+Nov-16 19:51:36.875 [main] DEBUG nextflow.trace.ReportObserver - Execution report summary data:
+  {"makeHisatSplicesites":{"cpu":null,"mem":null,"time":{"mean":5091,"min":5091,"q1":5091,"q2":5091,"q3":5091,"max":5091,"minLabel":"makeHisatSplicesites (gencode.v28.basic.annotation.gtf)","maxLabel":"makeHisatSplicesites (gencode.v28.basic.annotation.gtf)","q1Label":"makeHisatSplicesites (gencode.v28.basic.annotation.gtf)","q2Label":"makeHisatSplicesites (gencode.v28.basic.annotation.gtf)","q3Label":"makeHisatSplicesites (gencode.v28.basic.annotation.gtf)"},"reads":null,"writes":null,"cpuUsage":null,"memUsage":null,"timeUsage":{"mean":0.07,"min":0.07,"q1":0.07,"q2":0.07,"q3":0.07,"max":0.07,"minLabel":"makeHisatSplicesites (gencode.v28.basic.annotation.gtf)","maxLabel":"makeHisatSplicesites (gencode.v28.basic.annotation.gtf)","q1Label":"makeHisatSplicesites (gencode.v28.basic.annotation.gtf)","q2Label":"makeHisatSplicesites (gencode.v28.basic.annotation.gtf)","q3Label":"makeHisatSplicesites (gencode.v28.basic.annotation.gtf)"}},"get_software_versions":{"cpu":null,"mem":null,"time":{"mean":5094,"min":5094,"q1":5094,"q2":5094,"q3":5094,"max":5094,"minLabel":"get_software_versions","maxLabel":"get_software_versions","q1Label":"get_software_versions","q2Label":"get_software_versions","q3Label":"get_software_versions"},"reads":null,"writes":null,"cpuUsage":null,"memUsage":null,"timeUsage":{"mean":0.07,"min":0.07,"q1":0.07,"q2":0.07,"q3":0.07,"max":0.07,"minLabel":"get_software_versions","maxLabel":"get_software_versions","q1Label":"get_software_versions","q2Label":"get_software_versions","q3Label":"get_software_versions"}},"output_documentation":{"cpu":null,"mem":null,"time":{"mean":5095,"min":5095,"q1":5095,"q2":5095,"q3":5095,"max":5095,"minLabel":"output_documentation","maxLabel":"output_documentation","q1Label":"output_documentation","q2Label":"output_documentation","q3Label":"output_documentation"},"reads":null,"writes":null,"cpuUsage":null,"memUsage":null,"timeUsage":{"mean":0.07,"min":0.07,"q1":0.07,"q2":0.07,"q3":0.07,"max":0.07,"minLabel":"output_documentation","maxLabel":"output_documentation","q1Label":"output_documentation","q2Label":"output_documentation","q3Label":"output_documentation"}},"workflow_summary_mqc":{"cpu":null,"mem":null,"time":{"mean":10,"min":10,"q1":10,"q2":10,"q3":10,"max":10,"minLabel":"workflow_summary_mqc","maxLabel":"workflow_summary_mqc","q1Label":"workflow_summary_mqc","q2Label":"workflow_summary_mqc","q3Label":"workflow_summary_mqc"},"reads":null,"writes":null,"cpuUsage":null,"memUsage":null,"timeUsage":null},"trim_galore":{"cpu":null,"mem":null,"time":{"mean":5077.25,"min":4995,"q1":5087,"q2":5088.5,"q3":5090,"max":5092,"minLabel":"trim_galore (SAMEA3234534)","maxLabel":"trim_galore (SAMEA3234536)","q1Label":"trim_galore (SAMEA3234544)","q2Label":"trim_galore (SAMEA3234538)","q3Label":"trim_galore (SAMEA3234540)"},"reads":null,"writes":null,"cpuUsage":null,"memUsage":null,"timeUsage":{"mean":0.02,"min":0.02,"q1":0.02,"q2":0.02,"q3":0.02,"max":0.02,"minLabel":"trim_galore (SAMEA3234534)","maxLabel":"trim_galore (SAMEA3234536)","q1Label":"trim_galore (SAMEA3234544)","q2Label":"trim_galore (SAMEA3234538)","q3Label":"trim_galore (SAMEA3234540)"}},"makeBED12":{"cpu":null,"mem":null,"time":{"mean":5089,"min":5089,"q1":5089,"q2":5089,"q3":5089,"max":5089,"minLabel":"makeBED12 (gencode.v28.basic.annotation.gtf)","maxLabel":"makeBED12 (gencode.v28.basic.annotation.gtf)","q1Label":"makeBED12 (gencode.v28.basic.annotation.gtf)","q2Label":"makeBED12 (gencode.v28.basic.annotation.gtf)","q3Label":"makeBED12 (gencode.v28.basic.annotation.gtf)"},"reads":null,"writes":null,"cpuUsage":null,"memUsage":null,"timeUsage":{"mean":0.07,"min":0.07,"q1":0.07,"q2":0.07,"q3":0.07,"max":0.07,"minLabel":"makeBED12 (gencode.v28.basic.annotation.gtf)","maxLabel":"makeBED12 (gencode.v28.basic.annotation.gtf)","q1Label":"makeBED12 (gencode.v28.basic.annotation.gtf)","q2Label":"makeBED12 (gencode.v28.basic.annotation.gtf)","q3Label":"makeBED12 (gencode.v28.basic.annotation.gtf)"}}}
+Nov-16 19:51:37.816 [main] DEBUG nextflow.trace.TimelineObserver - Flow completing -- rendering html timeline
+Nov-16 19:51:37.949 [main] DEBUG nextflow.CacheDB - Closing CacheDB done
+Nov-16 19:51:37.967 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye
